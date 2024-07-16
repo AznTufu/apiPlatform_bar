@@ -16,13 +16,13 @@ use ApiPlatform\Metadata\Post;
 use ApiPlatform\Metadata\Patch;
 use ApiPlatform\Metadata\Delete;
 use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Component\Serializer\Annotation\MaxDepth;
+use App\State\WaiterAssignmentProcessor;
 
 #[ApiResource(
     forceEager: false,
     operations: [
         new GetCollection(security: "is_granted('ROLE_PATRON') || is_granted('ROLE_BARMAN') || is_granted('ROLE_WAITER')"),
-        new Post(security: "is_granted('ROLE_BARMAN') || is_granted('ROLE_WAITER')"),
+        new Post(security: "is_granted('ROLE_BARMAN') || is_granted('ROLE_WAITER')", processor: WaiterAssignmentProcessor::class),
         new Get(security: "is_granted('ROLE_BARMAN') || is_granted('ROLE_WAITER')"),
         new Patch(
             security: "is_granted('ROLE_PATRON') || is_granted('ROLE_BARMAN') || is_granted('ROLE_WAITER') || is_granted('ROLE_USER')",
@@ -60,7 +60,7 @@ class Order
     private ?int $tableNumber = null;
 
     #[ORM\ManyToOne(inversedBy: 'orders')]
-    #[Groups(['read', 'write'])]
+    #[Groups(['read'])]
     private ?User $waiter = null;
 
     #[ORM\ManyToOne(inversedBy: 'orders')]
@@ -136,7 +136,7 @@ class Order
         return $this->waiter;
     }
 
-    public function setWaiter(?User $waiter): static
+    public function setWaiter(?User $waiter): ?static
     {
         $this->waiter = $waiter;
 
