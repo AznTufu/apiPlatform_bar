@@ -1,0 +1,614 @@
+{
+	"info": {
+		"_postman_id": "dff9d912-ad55-44c3-874b-6702aef2dc96",
+		"name": "apiPlatform_bar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36986175"
+	},
+	"item": [
+		{
+			"name": "Boisson",
+			"item": [
+				{
+					"name": "Listes des boissons",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjExNDA3NzUsImV4cCI6MTcyMTE0NDM3NSwicm9sZXMiOlsiUk9MRV9CQVJNQU4iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJiYXJtYW5AYmFybWFuLmNvbSJ9.PQwfdMVXHX0wBcx1tLqpORr-8Jj4gHqgBOAsf3YXKX_vtJiPplfBbJuimxHxlOdfMAjdx1j88IMPQDMY7jJdFLjX4riz3RZulafsh_uEy5V_y_Zf2mscbZGnO-G-OAvmpDnD3Q6sNJd55ZZhwCIvOYrVEWvz1niyKWhPYNknPV7brkz1-cUyIpc1pdeU4RhdYsY6qcDhMWJS2dEzFZPSs05QdaQXHr91i5w2OkW3rb3JZbrHIFJ4K6tE0EpC_5CHSU7QQLO8x462AofSJXa67jc_gnxUYvQ0vlRE3ezFLLDKP49kt3tuTlSRnkv8OgyeVo6pPybKTN96bpa_9yww3Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/drinks",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"drinks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Une boisson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjExNDA3NzUsImV4cCI6MTcyMTE0NDM3NSwicm9sZXMiOlsiUk9MRV9CQVJNQU4iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJiYXJtYW5AYmFybWFuLmNvbSJ9.PQwfdMVXHX0wBcx1tLqpORr-8Jj4gHqgBOAsf3YXKX_vtJiPplfBbJuimxHxlOdfMAjdx1j88IMPQDMY7jJdFLjX4riz3RZulafsh_uEy5V_y_Zf2mscbZGnO-G-OAvmpDnD3Q6sNJd55ZZhwCIvOYrVEWvz1niyKWhPYNknPV7brkz1-cUyIpc1pdeU4RhdYsY6qcDhMWJS2dEzFZPSs05QdaQXHr91i5w2OkW3rb3JZbrHIFJ4K6tE0EpC_5CHSU7QQLO8x462AofSJXa67jc_gnxUYvQ0vlRE3ezFLLDKP49kt3tuTlSRnkv8OgyeVo6pPybKTN96bpa_9yww3Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/drinks/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"drinks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ajout d'une boisson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjExNDA3NzUsImV4cCI6MTcyMTE0NDM3NSwicm9sZXMiOlsiUk9MRV9CQVJNQU4iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJiYXJtYW5AYmFybWFuLmNvbSJ9.PQwfdMVXHX0wBcx1tLqpORr-8Jj4gHqgBOAsf3YXKX_vtJiPplfBbJuimxHxlOdfMAjdx1j88IMPQDMY7jJdFLjX4riz3RZulafsh_uEy5V_y_Zf2mscbZGnO-G-OAvmpDnD3Q6sNJd55ZZhwCIvOYrVEWvz1niyKWhPYNknPV7brkz1-cUyIpc1pdeU4RhdYsY6qcDhMWJS2dEzFZPSs05QdaQXHr91i5w2OkW3rb3JZbrHIFJ4K6tE0EpC_5CHSU7QQLO8x462AofSJXa67jc_gnxUYvQ0vlRE3ezFLLDKP49kt3tuTlSRnkv8OgyeVo6pPybKTN96bpa_9yww3Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"vodka\",\r\n  \"price\": 9,\r\n  \"file\": \"/api/medias/3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/drinks",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"drinks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mise à jour d'une boisson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjExNDA3NzUsImV4cCI6MTcyMTE0NDM3NSwicm9sZXMiOlsiUk9MRV9CQVJNQU4iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJiYXJtYW5AYmFybWFuLmNvbSJ9.PQwfdMVXHX0wBcx1tLqpORr-8Jj4gHqgBOAsf3YXKX_vtJiPplfBbJuimxHxlOdfMAjdx1j88IMPQDMY7jJdFLjX4riz3RZulafsh_uEy5V_y_Zf2mscbZGnO-G-OAvmpDnD3Q6sNJd55ZZhwCIvOYrVEWvz1niyKWhPYNknPV7brkz1-cUyIpc1pdeU4RhdYsY6qcDhMWJS2dEzFZPSs05QdaQXHr91i5w2OkW3rb3JZbrHIFJ4K6tE0EpC_5CHSU7QQLO8x462AofSJXa67jc_gnxUYvQ0vlRE3ezFLLDKP49kt3tuTlSRnkv8OgyeVo6pPybKTN96bpa_9yww3Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/merge-patch+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"coca\",\r\n  \"price\": 3.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/drinks/3",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"drinks",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Suppression d'une boisson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjExNDA3NzUsImV4cCI6MTcyMTE0NDM3NSwicm9sZXMiOlsiUk9MRV9CQVJNQU4iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJiYXJtYW5AYmFybWFuLmNvbSJ9.PQwfdMVXHX0wBcx1tLqpORr-8Jj4gHqgBOAsf3YXKX_vtJiPplfBbJuimxHxlOdfMAjdx1j88IMPQDMY7jJdFLjX4riz3RZulafsh_uEy5V_y_Zf2mscbZGnO-G-OAvmpDnD3Q6sNJd55ZZhwCIvOYrVEWvz1niyKWhPYNknPV7brkz1-cUyIpc1pdeU4RhdYsY6qcDhMWJS2dEzFZPSs05QdaQXHr91i5w2OkW3rb3JZbrHIFJ4K6tE0EpC_5CHSU7QQLO8x462AofSJXa67jc_gnxUYvQ0vlRE3ezFLLDKP49kt3tuTlSRnkv8OgyeVo6pPybKTN96bpa_9yww3Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/drinks/2",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"drinks",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Liste des commandes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjExMzc4ODgsImV4cCI6MTcyMTE0MTQ4OCwicm9sZXMiOlsiUk9MRV9CQVJNQU4iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJiYXJtYW5AYmFybWFuLmNvbSJ9.OcksPWaeLv4Zu18d_HhuAnfWD_H8tc2WJdVK1wunCQoyQHCp1_isI_fouctxDvjnd8wDLIbvX667J_FoqsSz48X7hY9cXLgn57BaxIQy0PoTb9w2pVvDks-zeaIk15NW6BbeHsW95un6H1UtlwzFspVrWC62dcgt7be-f7VYm809lbpiFEGatGyWfuSfLXmpknDVC1wsfkI_be5a4K_WwnNebyG_uAH9qeSJ81bE2yEX8_3XYMMRu4h-77l4y9Rf-H8fxT9fBpjeD8wDScqOpOjr_6JVWlfqgGdu2JYjatyiGpppd5zDIBIpBOyj9wUL9S7S-CFlQAuhxHNISXdycA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/orders",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Une commande",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjExMzc4ODgsImV4cCI6MTcyMTE0MTQ4OCwicm9sZXMiOlsiUk9MRV9CQVJNQU4iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJiYXJtYW5AYmFybWFuLmNvbSJ9.OcksPWaeLv4Zu18d_HhuAnfWD_H8tc2WJdVK1wunCQoyQHCp1_isI_fouctxDvjnd8wDLIbvX667J_FoqsSz48X7hY9cXLgn57BaxIQy0PoTb9w2pVvDks-zeaIk15NW6BbeHsW95un6H1UtlwzFspVrWC62dcgt7be-f7VYm809lbpiFEGatGyWfuSfLXmpknDVC1wsfkI_be5a4K_WwnNebyG_uAH9qeSJ81bE2yEX8_3XYMMRu4h-77l4y9Rf-H8fxT9fBpjeD8wDScqOpOjr_6JVWlfqgGdu2JYjatyiGpppd5zDIBIpBOyj9wUL9S7S-CFlQAuhxHNISXdycA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/4",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ajout d'une commande",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjExNDA3NzUsImV4cCI6MTcyMTE0NDM3NSwicm9sZXMiOlsiUk9MRV9CQVJNQU4iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJiYXJtYW5AYmFybWFuLmNvbSJ9.PQwfdMVXHX0wBcx1tLqpORr-8Jj4gHqgBOAsf3YXKX_vtJiPplfBbJuimxHxlOdfMAjdx1j88IMPQDMY7jJdFLjX4riz3RZulafsh_uEy5V_y_Zf2mscbZGnO-G-OAvmpDnD3Q6sNJd55ZZhwCIvOYrVEWvz1niyKWhPYNknPV7brkz1-cUyIpc1pdeU4RhdYsY6qcDhMWJS2dEzFZPSs05QdaQXHr91i5w2OkW3rb3JZbrHIFJ4K6tE0EpC_5CHSU7QQLO8x462AofSJXa67jc_gnxUYvQ0vlRE3ezFLLDKP49kt3tuTlSRnkv8OgyeVo6pPybKTN96bpa_9yww3Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"drinksList\": [\"/api/drinks/1\"],\r\n  \"tableNumber\": 1,\r\n  \"waiter\": \"/api/users/3\",\r\n  \"barman\":\"/api/users/2\",\r\n  \"status\": \"payée\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/orders",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mise à jour d'une commande",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjExNDA3NzUsImV4cCI6MTcyMTE0NDM3NSwicm9sZXMiOlsiUk9MRV9CQVJNQU4iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJiYXJtYW5AYmFybWFuLmNvbSJ9.PQwfdMVXHX0wBcx1tLqpORr-8Jj4gHqgBOAsf3YXKX_vtJiPplfBbJuimxHxlOdfMAjdx1j88IMPQDMY7jJdFLjX4riz3RZulafsh_uEy5V_y_Zf2mscbZGnO-G-OAvmpDnD3Q6sNJd55ZZhwCIvOYrVEWvz1niyKWhPYNknPV7brkz1-cUyIpc1pdeU4RhdYsY6qcDhMWJS2dEzFZPSs05QdaQXHr91i5w2OkW3rb3JZbrHIFJ4K6tE0EpC_5CHSU7QQLO8x462AofSJXa67jc_gnxUYvQ0vlRE3ezFLLDKP49kt3tuTlSRnkv8OgyeVo6pPybKTN96bpa_9yww3Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/merge-patch+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"drinksList\": [\"/api/drinks/3\", \"/api/drinks/4\"],\r\n  \"tableNumber\": 1,\r\n  \"waiter\": \"/api/users/3\",\r\n  \"barman\":\"/api/users/2\",\r\n  \"status\": \"payée\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/orders/2",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"orders",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Ajout d'un utilisateur",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjExMzc4ODgsImV4cCI6MTcyMTE0MTQ4OCwicm9sZXMiOlsiUk9MRV9CQVJNQU4iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJiYXJtYW5AYmFybWFuLmNvbSJ9.OcksPWaeLv4Zu18d_HhuAnfWD_H8tc2WJdVK1wunCQoyQHCp1_isI_fouctxDvjnd8wDLIbvX667J_FoqsSz48X7hY9cXLgn57BaxIQy0PoTb9w2pVvDks-zeaIk15NW6BbeHsW95un6H1UtlwzFspVrWC62dcgt7be-f7VYm809lbpiFEGatGyWfuSfLXmpknDVC1wsfkI_be5a4K_WwnNebyG_uAH9qeSJ81bE2yEX8_3XYMMRu4h-77l4y9Rf-H8fxT9fBpjeD8wDScqOpOjr_6JVWlfqgGdu2JYjatyiGpppd5zDIBIpBOyj9wUL9S7S-CFlQAuhxHNISXdycA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"test@test.com\",\r\n  \"roles\": [\r\n    \"test\"\r\n  ],\r\n  \"plainPassword\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/users",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Connexion",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"barman@barman.com\",\r\n  \"password\": \"barman\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/auth",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Liste des utilisateurs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjExMzc4ODgsImV4cCI6MTcyMTE0MTQ4OCwicm9sZXMiOlsiUk9MRV9CQVJNQU4iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJiYXJtYW5AYmFybWFuLmNvbSJ9.OcksPWaeLv4Zu18d_HhuAnfWD_H8tc2WJdVK1wunCQoyQHCp1_isI_fouctxDvjnd8wDLIbvX667J_FoqsSz48X7hY9cXLgn57BaxIQy0PoTb9w2pVvDks-zeaIk15NW6BbeHsW95un6H1UtlwzFspVrWC62dcgt7be-f7VYm809lbpiFEGatGyWfuSfLXmpknDVC1wsfkI_be5a4K_WwnNebyG_uAH9qeSJ81bE2yEX8_3XYMMRu4h-77l4y9Rf-H8fxT9fBpjeD8wDScqOpOjr_6JVWlfqgGdu2JYjatyiGpppd5zDIBIpBOyj9wUL9S7S-CFlQAuhxHNISXdycA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Un utilisateur",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjExMzc4ODgsImV4cCI6MTcyMTE0MTQ4OCwicm9sZXMiOlsiUk9MRV9CQVJNQU4iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJiYXJtYW5AYmFybWFuLmNvbSJ9.OcksPWaeLv4Zu18d_HhuAnfWD_H8tc2WJdVK1wunCQoyQHCp1_isI_fouctxDvjnd8wDLIbvX667J_FoqsSz48X7hY9cXLgn57BaxIQy0PoTb9w2pVvDks-zeaIk15NW6BbeHsW95un6H1UtlwzFspVrWC62dcgt7be-f7VYm809lbpiFEGatGyWfuSfLXmpknDVC1wsfkI_be5a4K_WwnNebyG_uAH9qeSJ81bE2yEX8_3XYMMRu4h-77l4y9Rf-H8fxT9fBpjeD8wDScqOpOjr_6JVWlfqgGdu2JYjatyiGpppd5zDIBIpBOyj9wUL9S7S-CFlQAuhxHNISXdycA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/4",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mise à jour utilisateur",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjExMzcwNjYsImV4cCI6MTcyMTE0MDY2Niwicm9sZXMiOlsiUk9MRV9QQVRST04iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJwYXRyb25AcGF0cm9uLmNvbSJ9.kIp_iZEf2Ky10-sUT4LtZfzQFhSxjAv1w0UsL6HPQRPAtK9N-pGFPlX4bx_j4cWwLiP8_wjE2FS7gtJzROJErdopuLyTYWZgII8cD5zNdiZXaZJ8VY9Rd1DMrGU-Yjro8n34_DtP9CKtr1fNNzE0vklWkNvQhRVRKcOn7FXYThOKs1ISLghAvzCJlDIDv6c_TbqNgvtmDrT8xc7SM1QXHpPpB4trzYJ_s3YrQ3PLZ44F8c1sWh2-WeWxoc_GAt7wAuotBq_J2wgWjX_38OUTWvPChxpb0BNCPIYvVPbzyzIufwOOG7SLL2QZciN4iD2ohOqIDgRk0SX4j6-tcGoMMw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/merge-patch+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"bonjour@a.com\",\r\n  \"plainPassword\": \"a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/users/4",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Suppression d'un utilisateur",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjExMzcwNjYsImV4cCI6MTcyMTE0MDY2Niwicm9sZXMiOlsiUk9MRV9QQVRST04iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJwYXRyb25AcGF0cm9uLmNvbSJ9.kIp_iZEf2Ky10-sUT4LtZfzQFhSxjAv1w0UsL6HPQRPAtK9N-pGFPlX4bx_j4cWwLiP8_wjE2FS7gtJzROJErdopuLyTYWZgII8cD5zNdiZXaZJ8VY9Rd1DMrGU-Yjro8n34_DtP9CKtr1fNNzE0vklWkNvQhRVRKcOn7FXYThOKs1ISLghAvzCJlDIDv6c_TbqNgvtmDrT8xc7SM1QXHpPpB4trzYJ_s3YrQ3PLZ44F8c1sWh2-WeWxoc_GAt7wAuotBq_J2wgWjX_38OUTWvPChxpb0BNCPIYvVPbzyzIufwOOG7SLL2QZciN4iD2ohOqIDgRk0SX4j6-tcGoMMw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/4",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Files",
+			"item": [
+				{
+					"name": "upload file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/dpstr/Downloads/vodka.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/medias",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"medias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Liste des fichiers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/medias",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"medias"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
