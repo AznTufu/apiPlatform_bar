@@ -83,7 +83,7 @@ class Media
         return $this->filePath;
     }
 
-    public function setFilePath(string $filePath): static
+    public function setFilePath(string $filePath): ?static
     {
         $this->filePath = $filePath;
 

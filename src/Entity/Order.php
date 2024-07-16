@@ -17,7 +17,10 @@ use ApiPlatform\Metadata\Patch;
 use ApiPlatform\Metadata\Delete;
 use Symfony\Component\Validator\Constraints as Assert;
 use App\State\WaiterAssignmentProcessor;
+use ApiPlatform\Metadata\ApiFilter;
+use ApiPlatform\Doctrine\Orm\Filter\DateFilter;
 
+#[ApiFilter(DateFilter::class, properties: ['createdDate'])]
 #[ApiResource(
     forceEager: false,
     operations: [
