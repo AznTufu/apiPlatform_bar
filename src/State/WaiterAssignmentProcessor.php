@@ -18,20 +18,18 @@ class WaiterAssignmentProcessor implements ProcessorInterface
     ) {
     }
 
-    public function process(mixed $data, Operation $operation, array $uriVariables = [], array $context = []): void
+    public function process(mixed $data, Operation $operation, array $uriVariables = [], array $context = [])
     {
-    
         if (!$data instanceof Order) {
-            $this->persistProcessor->process($data, $operation, $uriVariables, $context);
-            return;
+            return $this->persistProcessor->process($data, $operation, $uriVariables, $context);
         }
- 
+
         $user = $this->security->getUser();
-    
+
         if ($user instanceof User && in_array('ROLE_WAITER', $user->getRoles())) {
             $data->setWaiter($user);
         }
 
-        $this->persistProcessor->process($data, $operation, $uriVariables, $context);
+        return $this->persistProcessor->process($data, $operation, $uriVariables, $context);
     }
 }
